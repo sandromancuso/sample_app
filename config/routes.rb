@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  get "users/new"
+
   # match '/<page>' also automatically creates 'named routes' for use in the controllers 
   # and views
   # page_path => '/page'
