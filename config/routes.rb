@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
-
-  get "users/new"
+  
+  resources :users
 
   # match '/<page>' also automatically creates 'named routes' for use in the controllers 
   # and views
