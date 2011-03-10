@@ -1,13 +1,11 @@
 SampleApp::Application.routes.draw do
   
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
-  # match '/<page>' also automatically creates 'named routes' for use in the controllers 
-  # and views
-  # page_path => '/page'
-  # page_url => 'http://localhost:3000/page
-
-  match '/signup',  :to => 'users#new'
+  match '/signup',  :to => 'users#new'  
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
